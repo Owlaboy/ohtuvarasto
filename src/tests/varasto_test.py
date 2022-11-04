@@ -33,6 +33,7 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.paljonko_mahtuu(), 2)
 
     def test_negatiivinen_lisays(self):
+        self.varasto = Varasto(10, 5)
         alkuarvo = self.varasto.paljonko_mahtuu()
 
         self.varasto.lisaa_varastoon(-1)
@@ -52,6 +53,7 @@ class TestVarasto(unittest.TestCase):
         self.assertAlmostEqual(self.varasto.saldo, 10)
 
     def test_negatiivinen_ottaminen(self):
+        self.varasto = Varasto(10, 5)
         alkuarvo = self.varasto.paljonko_mahtuu()
 
         self.varasto.ota_varastosta(-1)
